@@ -1,0 +1,8 @@
+{
+  "name": "hydrate1",
+  "app_id": "2a04a9c1",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
