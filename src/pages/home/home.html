@@ -3,12 +3,26 @@
     <ion-title>
       Ionic Blank
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="createTodo()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-card *ngFor="let i of todo.arr">
+    <ion-card-header>
+      {{i.todo}}
+      <ion-buttons end>
+          <button ion-button (click)="editTodo(i)">
+              <ion-icon name="create"></ion-icon>
+            </button>
+        <button ion-button (click)="deleteTodo(i)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-card-header>
+  </ion-card>
 </ion-content>

@@ -1,0 +1,31 @@
+<ion-list>
+
+  <ion-item>
+    <ion-label>TODO</ion-label>
+    <ion-input type="text" value="" [(ngModel)]="event.todo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>End Date</ion-label>
+    <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>End Time</ion-label>
+    <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+  </ion-item>
+
+  <ion-buttons>
+    <button ion-button outline (click)="addTodo(event)">
+      Save
+    </button>
+    <button ion-button outline color="dark" (click)="cancel(event)">
+        Cancel
+      </button>
+  </ion-buttons>
+
+</ion-list>
+<!-- 
+<div padding>
+  <button (click)="addTodo(event)">Add TODO</button>
+</div> -->
